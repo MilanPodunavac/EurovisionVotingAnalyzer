@@ -69,7 +69,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--vote_dataset', type=Path,
-        default=Path(__file__).resolve().parent / 'dataset_bodovi' / 'eurovision_song_contest_1975_2023.csv'
+        default=Path(__file__).resolve().parent / 'dataset_bodovi' / 'eurovision_song_contest_2009_2023.csv'
     )
 
     parser.add_argument(

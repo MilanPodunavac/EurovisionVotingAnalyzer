@@ -106,7 +106,7 @@ class Song:
         self.country: str = country
         self.artist_name: str = artist_name
         self.song_name: str = song_name
-        self.language: List[str] = language
+        self.language: str = language
         self.style: str = style
         self.direct_qualifier: int = direct_qualifier
         self.gender: str = gender
@@ -152,7 +152,7 @@ class Song:
         self.country: str = csv_row[4]
         self.artist_name: str = csv_row[5]
         self.song_name: str = csv_row[6]
-        self.language: List[str] = csv_row[7].split(', ')
+        self.language: str = csv_row[7]
         self.style: str = csv_row[8]
         self.direct_qualifier: int = to_int(csv_row[9])
         self.gender: str = csv_row[10]
@@ -175,7 +175,8 @@ class Song:
         self.backing_singers: int = to_int(csv_row[27])
         self.backing_instruments: int = to_int(csv_row[28])
         self.instrument: int = to_int(csv_row[29])
-        self.qualified: bool = to_bool(csv_row[30])
+        #self.qualified: bool = to_bool(csv_row[30])
+        self.qualified: bool = self.final_draw_position > 0
         self.final_televote_points: int = to_int(csv_row[31])
         self.final_jury_points: int = to_int(csv_row[32])
         self.final_televote_votes: int = to_int(csv_row[33])
