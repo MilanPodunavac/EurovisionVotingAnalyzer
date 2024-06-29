@@ -49,7 +49,9 @@ class Song:
         'semi_total_points',
         'favourite',
         'race',
-        'host'
+        'host',
+        'lyrics',
+        'translation'
     )
 
     def __init__(
@@ -144,7 +146,7 @@ class Song:
         self.race: str = race
         self.host: bool = host
 
-    def __init__(self, csv_row: list[str]):
+    def __init__(self, csv_row: list[str], song_lyrics: str, song_translation: str):
         self.year: int = to_int(csv_row[0])
         self.semi_final: int = to_int(csv_row[1])
         self.semi_draw_position: int = to_int(csv_row[2])
@@ -191,8 +193,11 @@ class Song:
         self.race: str = csv_row[42]
         self.host: bool = to_bool(csv_row[43])
 
+        #self.lyrics: str = song_lyrics + '\n' + song_translation
+        self.lyrics: str = song_lyrics if len(song_translation) < 50 else song_translation
+
     def __str__(self):
-        return f"Song: {self.song_name} - {self.artist_name} ({self.country} {self.year}) "
+        return f"Song: {self.song_name} - {self.artist_name} ({self.country} {self.year}), {len(self.lyrics)} "
 
     def to_dict(self):
         dictionary = {
@@ -240,5 +245,6 @@ class Song:
             'favourite': self.semi_place,
             'race': self.semi_televote_points,
             'host': self.semi_jury_points,
+            'lyrics': self.lyrics,
         }
         return dictionary

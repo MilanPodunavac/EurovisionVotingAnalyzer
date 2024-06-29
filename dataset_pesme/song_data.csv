@@ -11,7 +11,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2023,1,10,18,Moldova,Pasha Parfeni,Soarele si luna,Romanian,Traditional,0,Male,1,unknown,unknown,Ab Major,125,86,62,34,5 dB,36,0,18,14,unknown,unknown,0,2,3,0,1,76,20,17,4,18,96,5,109,,109,0,unknown,0
 2023,1,11,9,Sweden,Loreen,Tattoo,English,Pop,0,Female,1,unknown,unknown,Eb Minor,150,78,55,30,6 dB,24,0,12,8,unknown,unknown,0,0,0,0,1,243,340,36,36,1,583,2,135,,135,1,unknown,0
 2023,1,12,,Azerbaijan,TuralTuranX,Tell Me More,English,Pop,-,Male,2,unknown,unknown,D Major,96,75,71,42,8 dB,2,0,29,4,unknown,unknown,0,0,0,1,0,,,,,,,14,4,,4,0,unknown,0
-2023,1,13,14,Czech Republic,Vesna,My Sister's Crown,"English,†Ukrainian,†Czech,†Bulgarian",Pop,0,Female,6,unknown,unknown,E Minor,150,92,55,51,6 dB,5,0,37,16,unknown,unknown,0,0,0,0,1,35,94,12,18,10,129,4,110,,110,0,unknown,0
+2023,1,13,14,Czechia,Vesna,My Sister's Crown,"English,†Ukrainian,†Czech,†Bulgarian",Pop,0,Female,6,unknown,unknown,E Minor,150,92,55,51,6 dB,5,0,37,16,unknown,unknown,0,0,0,0,1,35,94,12,18,10,129,4,110,,110,0,unknown,0
 2023,1,14,,Netherlands,Mia Nicolai†and†Dion Cooper,Burning Daylight,English,Ballad,-,Mix,2,unknown,unknown,Eb Major,71,43,28,29,9 dB,58,0,11,4,unknown,unknown,0,0,0,0,0,,,,,,,13,7,,7,0,unknown,0
 2023,1,15,13,Finland,K‰‰rij‰,Cha Cha Cha,Finnish,Pop,0,Male,1,unknown,unknown,D Major,155,79,72,74,6 dB,0,0,11,4,unknown,unknown,4,0,0,0,1,376,150,37,22,2,526,1,177,,177,0,unknown,0
 2023,2,1,,Denmark,Reiley,Breaking My Heart,English,Pop,-,Male,1,unknown,unknown,D Major,194,75,59,57,5 dB,5,0,10,36,unknown,unknown,0,0,0,0,0,,,,,,,14,6,,6,0,unknown,0
@@ -70,7 +70,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2022,2,15,-,Montenegro,Vladana,Breathe,"English, Italian",Ballad,-,Female,1,unknown,unknown,G Minor,77,46,43,20,7 dB,55,0,10,3,unknown,unknown,0,0,0,0,0,,,,,,,17,22,11,33,0,unknown,0
 2022,2,16,16,Belgium,Jeremie Makiese,Miss You,English,Pop,0,Male,1,unknown,unknown,Fs Minor,144,53,63,28,6 dB,24,0,13,5,unknown,unknown,4,0,0,0,1,5,59,2,13,19,64,8,46,105,151,0,unknown,0
 2022,2,17,20,Sweden,Cornelia Jakobs,Hold Me Closer,English,Ballad,0,Female,1,unknown,unknown,Fs Major,97,62,49,17,8 dB,11,0,14,4,unknown,unknown,0,0,0,0,1,180,258,33,33,4,438,1,174,222,396,0,unknown,0
-2022,2,18,1,Czech Republic,We Are Domi,Lights Off,English,Dance,0,Female,1,unknown,unknown,A Minor,126,79,59,52,6 dB,15,0,21,11,unknown,unknown,0,0,2,0,1,5,33,1,11,22,38,4,125,102,227,0,unknown,0
+2022,2,18,1,Czechia,We Are Domi,Lights Off,English,Dance,0,Female,1,unknown,unknown,A Minor,126,79,59,52,6 dB,15,0,21,11,unknown,unknown,0,0,2,0,1,5,33,1,11,22,38,4,125,102,227,0,unknown,0
 2022,-,-,9,Italy,Mahmood†and†Blanco,Brividi,Italian,Ballad,1,Male,2,unknown,unknown,G Major,123,61,52,34,4 dB,45,0,25,3,unknown,unknown,0,0,1,0,-,110,158,23,26,6,268,,,,,0,unknown,1
 2022,-,-,10,Spain,Chanel,SloMo,"Spanish, English",Pop,1,Female,1,unknown,unknown,Cs Minor,105,81,73,59,3 dB,13,0,9,6,unknown,unknown,5,0,0,0,-,228,231,38,34,3,459,,,,,0,unknown,0
 2022,-,-,13,Germany,Malik Harris,Rockstars,English,Ballad,1,Male,1,unknown,unknown,G Major,81,64,65,52,6 dB,45,0,38,23,unknown,unknown,0,0,0,1,-,6,0,3,0,25,6,,,,,0,unknown,0
@@ -94,7 +94,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2021,1,16,6,Malta,Destiny,Je me casse,English,Pop,0,Female,1,unknown,unknown,Ab Minor,112,87,76,78,4 dB,15,0,28,11,unknown,unknown,4,0,0,0,1,47,208,15,35,7,255,1,151,174,325,1,unknown,0
 2021,2,1,-,San Marino,Senhit,Adrenalina,English,Dance,-,Mix,2,unknown,unknown,Bb Minor,104,89,67,53,6 dB,0,0,39,8,unknown,unknown,4,0,0,0,1,13,37,3,7,,,9,42,76,118,0,unknown,0
 2021,2,2,-,Estonia,Uku Suviste,The Lucky One,English,Ballad,-,Male,1,unknown,unknown,Ab Minor,176,64,40,41,9 dB,4,0,9,7,unknown,unknown,0,0,0,0,0,,,,,,,13,29,29,58,0,unknown,0
-2021,2,3,-,Czech Republic,Benny Cristo,Omaga,English,Ballad,-,Male,1,unknown,unknown,Fs Major,122,87,72,89,6 dB,11,0,34,3,unknown,unknown,4,0,0,0,0,,,,,,,15,0,23,23,0,unknown,0
+2021,2,3,-,Czechia,Benny Cristo,Omaga,English,Ballad,-,Male,1,unknown,unknown,Fs Major,122,87,72,89,6 dB,11,0,34,3,unknown,unknown,4,0,0,0,0,,,,,,,15,0,23,23,0,unknown,0
 2021,2,4,10,Greece,Stefania,Last Dance,English,Pop,0,Female,1,unknown,unknown,D Minor,147,91,53,39,5 dB,2,0,7,4,unknown,unknown,4,0,0,0,1,79,91,11,15,10,170,6,80,104,184,0,unknown,0
 2021,2,5,-,Austria,Vincent Bueno,Amen,English,Ballad,-,Male,1,unknown,unknown,Cs Major,80,38,44,8,10 dB,1,0,8,4,unknown,unknown,0,0,0,0,0,,,,,,,12,13,53,66,0,unknown,0
 2021,2,6,-,Poland,Rafal,The Ride,English,Pop,-,Male,1,unknown,unknown,B Minor,132,77,69,93,7 dB,40,0,25,3,unknown,unknown,4,0,0,0,0,,,,,,,14,17,18,35,0,unknown,0
@@ -120,7 +120,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2019,1,3,-,Finland,Darude feat. Sebastian Rejman,Look Away,English,Dance,-,Male,1,unknown,unknown,B Minor,126,89,50,48,4 dB,1,0,15,5,unknown,unknown,1,0,1,0,0,,,,,,,17,14,9,23,0,unknown,0
 2019,1,4,-,Poland,Tulia,Fire of Love,"Polish, English",Traditional,-,Female,4,unknown,unknown,A Major,96,78,59,78,4 dB,2,21,64,3,unknown,unknown,0,0,0,0,0,,,,,,,11,60,60,120,0,unknown,0
 2019,1,5,10,Slovenia,Zala Kralj & Gasper santl,Sebi,Slovene,Ballad,0,Mix,2,unknown,unknown,G Minor,108,65,78,74,7 dB,18,2,16,4,unknown,unknown,0,0,0,1,1,59,46,13,9,15,105,6,93,74,167,0,unknown,0
-2019,1,6,3,Czech Republic,Lake Malawi,Friend of a Friend,English,Pop,0,Male,1,unknown,unknown,A Minor,106,74,70,41,5 dB,27,0,7,6,unknown,unknown,0,0,2,0,1,7,150,4,26,11,157,2,85,157,242,0,unknown,0
+2019,1,6,3,Czechia,Lake Malawi,Friend of a Friend,English,Pop,0,Male,1,unknown,unknown,A Minor,106,74,70,41,5 dB,27,0,7,6,unknown,unknown,0,0,2,0,1,7,150,4,26,11,157,2,85,157,242,0,unknown,0
 2019,1,7,-,Hungary,Joci Papai,Az en apam,Hungarian,Ballad,-,Male,1,unknown,unknown,Eb Minor,96,45,63,33,8 dB,55,0,10,4,unknown,unknown,0,0,0,0,0,,,,,,,12,32,65,97,0,unknown,0
 2019,1,8,19,Belarus,ZENA,Like It,English,Dance,0,Female,1,unknown,unknown,G Minor,105,80,71,35,8 dB,29,0,20,5,unknown,unknown,2,2,0,0,1,13,18,2,5,24,31,10,44,78,122,0,unknown,0
 2019,1,9,23,Serbia,Nevena Bozovic,Kruna,Serbian,Ballad,0,Female,1,unknown,unknown,Ab Minor,158,48,20,16,6 dB,21,0,13,3,unknown,unknown,0,0,0,0,1,54,35,7,8,18,89,7,65,91,156,0,unknown,0
@@ -160,7 +160,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2018,1,2,-,Iceland,Ari Olafsson,Our Choice,English,Ballad,0,Male,1,unknown,unknown,B Major,130,49,48,7,10 dB,0,92,31,3,unknown,unknown,0,5,0,0,0,,,,,,,19,0,15,15,0,unknown,0
 2018,1,3,12,Albania,Eugent Bushpepa,Mall,Albanian,Rock,0,Male,4,unknown,unknown,E Major,95,76,39,41,6 dB,0,79,12,3,unknown,unknown,0,2,3,0,1,58,126,8,20,11,184,8,48,114,162,0,unknown,0
 2018,1,4,-,Belgium,Sennek,A Matter of Time,English,Pop,-,Female,1,unknown,unknown,C Minor,88,59,66,59,6 dB,12,0,20,3,unknown,unknown,0,0,0,0,0,,,,,,,12,20,71,91,0,unknown,0
-2018,1,5,14,Czech Republic,Mikolas Josef,Lie to Me,English,Pop,0,Male,1,unknown,unknown,Fs Minor,106,70,83,64,6 dB,0,0,36,12,unknown,unknown,2,0,0,0,1,215,66,35,16,6,281,3,134,98,232,0,unknown,0
+2018,1,5,14,Czechia,Mikolas Josef,Lie to Me,English,Pop,0,Male,1,unknown,unknown,Fs Minor,106,70,83,64,6 dB,0,0,36,12,unknown,unknown,2,0,0,0,1,215,66,35,16,6,281,3,134,98,232,0,unknown,0
 2018,1,6,4,Lithuania,Ieva Zasimauskaite,When We're Old,English,Ballad,0,Female,1,unknown,unknown,Bb Major,90,19,34,4,15 dB,87,85,16,4,unknown,unknown,0,0,0,0,1,91,90,11,17,12,181,9,62,57,119,0,unknown,0
 2018,1,7,22,Israel,Netta,Toy,English,Pop,0,Female,1,unknown,unknown,Eb Minor,130,71,79,80,5 dB,7,0,24,7,unknown,unknown,3,0,0,0,1,317,212,39,34,1,529,1,116,167,283,1,unknown,0
 2018,1,8,-,Belarus,Alekseev,Forever,English,Ballad,-,Male,1,unknown,unknown,A Minor,117,59,38,41,5 dB,60,0,20,4,unknown,unknown,1,0,0,0,0,,,,,,,16,45,20,65,0,unknown,0
@@ -212,7 +212,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2017,1,11,2,Poland,Kasia Mos,Flashlight,English,Pop,0,Female,1,unknown,unknown,D Major,120,68,44,19,6 dB,6,0,37,5,unknown,unknown,0,0,1,0,1,41,23,11,7,22,64,9,69,50,119,0,unknown,0
 2017,1,12,7,Moldova,Sunstroke Project,"Hey, Mamma!",English,Dance,0,Male,1,unknown,unknown,Bb Minor,110,81,83,64,6 dB,24,1,7,11,unknown,unknown,0,3,2,0,1,264,110,38,19,3,374,2,180,111,291,0,unknown,0
 2017,1,13,-,Iceland,Svala,Paper,English,Pop,-,Female,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,0,0,0,0,,,,,,,15,31,29,60,0,unknown,0
-2017,1,14,-,Czech Republic,Martina Barta,My Turn,English,Pop,-,Female,1,unknown,unknown,G Major,86,42,36,16,6 dB,44,0,31,4,unknown,unknown,0,0,0,0,0,,,,,,,13,2,81,83,0,unknown,0
+2017,1,14,-,Czechia,Martina Barta,My Turn,English,Pop,-,Female,1,unknown,unknown,G Major,86,42,36,16,6 dB,44,0,31,4,unknown,unknown,0,0,0,0,0,,,,,,,13,2,81,83,0,unknown,0
 2017,1,15,19,Cyprus,Hovig,Gravity,English,Pop,0,Male,1,unknown,unknown,Bb Minor,75,73,59,72,7 dB,4,0,11,9,unknown,unknown,2,0,0,0,1,32,36,6,7,21,68,5,103,61,164,0,unknown,0
 2017,1,16,5,Armenia,Artsvik,Fly with Me,English,Pop,0,Female,1,unknown,unknown,E Minor,90,80,58,33,5 dB,79,6,8,15,unknown,unknown,2,0,0,0,1,21,58,5,16,18,79,7,65,87,152,0,unknown,0
 2017,1,17,-,Slovenia,Omar Naber,On My Way,English,Ballad,-,Male,1,unknown,unknown,D Major,67,55,42,14,6 dB,30,0,52,4,unknown,unknown,0,0,0,0,0,,,,,,,17,20,16,36,0,unknown,0
@@ -250,7 +250,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2016,1,7,26,Armenia,Iveta Mukuchyan,LoveWave,English,Pop,0,Female,1,unknown,unknown,F Minor,120,72,53,31,8 dB,8,0,11,5,unknown,unknown,0,0,0,0,1,134,115,21,21,7,249,2,116,127,243,0,unknown,0
 2016,1,8,-,San Marino,Serhat,I Didn't Know,English,Pop,-,Male,1,unknown,unknown,Fs Minor,123,70,68,54,7 dB,3,0,13,5,unknown,unknown,0,5,0,0,0,,,,,,,12,49,19,68,0,unknown,0
 2016,1,9,18,Russia,Sergey Lazarev,You Are the Only One,English,Pop,0,Male,1,unknown,unknown,B Minor,128,89,63,28,5 dB,4,0,9,6,unknown,unknown,0,0,0,0,1,361,130,41,20,3,491,1,194,148,342,1,unknown,0
-2016,1,10,2,Czech Republic,Gabriela Guncikova,I Stand,English,Pop,0,Female,1,unknown,unknown,G Minor,103,59,17,17,6 dB,0,0,31,4,unknown,unknown,0,0,0,0,1,0,41,0,11,25,41,9,41,120,161,0,unknown,0
+2016,1,10,2,Czechia,Gabriela Guncikova,I Stand,English,Pop,0,Female,1,unknown,unknown,G Minor,103,59,17,17,6 dB,0,0,31,4,unknown,unknown,0,0,0,0,1,0,41,0,11,25,41,9,41,120,161,0,unknown,0
 2016,1,11,14,Cyprus,Minus One,Alter Ego,English,Rock,0,Male,1,unknown,unknown,Bb Minor,130,91,48,59,4 dB,1,0,10,5,unknown,unknown,0,0,4,0,1,53,43,11,10,21,96,8,93,71,164,0,unknown,0
 2016,1,12,24,Austria,Zoe,Loin d'ici,French,Pop,0,Female,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,0,0,0,1,120,31,27,7,13,151,7,133,37,170,0,unknown,0
 2016,1,13,-,Estonia,Juri Pootsmann,Play,English,Pop,-,Male,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,0,0,0,0,,,,,,,18,15,9,24,0,unknown,0
@@ -306,7 +306,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2015,2,5,-,Malta,Amber,Warrior,English,Ballad,-,Female,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,0,0,0,0,,,,,,,11,,,43,0,unknown,0
 2015,2,6,9,Norway,Morland†&†Debrah Scarlett,A Monster Like Me,English,Ballad,0,Mix,2,unknown,unknown,Db Minor,147,31,31,17,8 dB,46,0,10,3,unknown,unknown,0,0,0,0,1,163,37,10,24,8,200,4,,,123,0,unknown,0
 2015,2,7,-,Portugal,Leonor Andrade,Ha um mar que nos separa,Portuguese,Ballad,-,Female,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,4,0,0,0,,,,,,,14,,,19,0,unknown,0
-2015,2,8,-,Czech Republic,Marta Jandova†&†Vaclav Noid Barta,Hope Never Dies,English,Ballad,-,Mix,2,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,0,0,0,0,,,,,,,13,,,33,0,unknown,0
+2015,2,8,-,Czechia,Marta Jandova†&†Vaclav Noid Barta,Hope Never Dies,English,Ballad,-,Mix,2,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,0,0,0,0,,,,,,,13,,,33,0,unknown,0
 2015,2,9,3,Israel,Nadav Guedj,Golden Boy,English,Pop,-,Male,1,unknown,unknown,Db Minor,115,83,72,70,5 dB,18,0,7,6,unknown,unknown,3,2,0,0,1,77,102,31,17,9,179,3,,,151,0,unknown,0
 2015,2,10,19,Latvia,Aminata,Love Injected,English,Pop,0,Female,1,unknown,unknown,G Minor,144,29,45,16,10 dB,12,2,12,5,unknown,unknown,0,3,0,0,1,249,88,22,35,6,337,2,,,155,0,unknown,0
 2015,2,11,24,Azerbaijan,Elnur Huseynov,Hour of the Wolf,English,Ballad,0,Male,1,unknown,unknown,D Major,106,67,48,19,5 dB,6,0,31,4,unknown,unknown,2,0,0,0,1,40,48,8,8,12,88,10,,,53,0,unknown,0
@@ -523,7 +523,7 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2010,-,-,18,France,Jessy Matador,Allez Ola Ole,French,Dance,1,Male,1,unknown,unknown,B Major,129,93,64,72,5 dB,0,0,6,6,unknown,unknown,3,2,0,0,-,151,34,,,12,185,,,,,0,unknown,0
 2010,-,-,22,Germany,Lena,Satellite,English,Pop,1,Female,1,unknown,unknown,E Minor,95,94,75,87,10 dB,0,79,10,5,unknown,unknown,0,4,0,0,-,243,187,,,1,430,,,,,1,unknown,0
 2009,1,1,-,Montenegro,Andrea Demirovic,Just Get Out of My Life,English,Pop,-,Female,1,unknown,unknown,G Minor,138,91,56,56,3 dB,2,0,66,5,unknown,unknown,1,0,0,0,0,,,,,,,,,,,0,unknown,0
-2009,1,2,-,Czech Republic,Gipsy.cz,Aven Romale,"English,†Romani",Traditional,-,Male,1,unknown,unknown,Bb Minor,154,84,80,69,7 dB,20,0,23,46,unknown,unknown,0,0,5,0,0,,,,,,,18,,,0,0,unknown,0
+2009,1,2,-,Czechia,Gipsy.cz,Aven Romale,"English,†Romani",Traditional,-,Male,1,unknown,unknown,Bb Minor,154,84,80,69,7 dB,20,0,23,46,unknown,unknown,0,0,5,0,0,,,,,,,18,,,0,0,unknown,0
 2009,1,3,-,Belgium,Copycat,Copycat,English,Pop,-,Male,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,0,2,2,0,0,,,,,,,17,,,1,0,unknown,0
 2009,1,4,-,Belarus,Petr Elfimov,Eyes That Never Lie,English,Rock,-,Male,1,unknown,unknown,D Minor,138,90,39,26,4 dB,0,0,34,5,unknown,unknown,1,2,1,0,0,,,,,,,13,,,25,0,unknown,0
 2009,1,5,4,Sweden,Malena Ernman,La voix,"French, English",Traditional,0,Female,1,unknown,unknown,Bb Major,128,65,52,46,4 dB,35,0,21,4,unknown,unknown,5,0,0,0,1,59,27,,,21,86,4,,,105,0,unknown,0

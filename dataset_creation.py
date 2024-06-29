@@ -1,4 +1,5 @@
 import csv
+import json
 import pickle
 from datetime import datetime
 from pathlib import Path
@@ -9,7 +10,14 @@ from song import Song
 from voting import Voting
 
 
-def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path,
+def find_lyrics(lyrics, year, country):
+    for key, song in lyrics.items():
+        if song.get('Year') == year and song.get('Country') == country:
+            return song.get('Lyrics'), song.get('Lyrics translation')
+    return ''
+
+
+def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path, lyrics_dataset: Path,
          country_dump: Path, song_dump: Path, vote_dump: Path):
     countries = []
     with open(country_dataset, 'r') as country_dataset_file:
@@ -22,12 +30,17 @@ def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path,
     with country_dump.open('wb') as f:
         pickle.dump(countries, f)
 
+    lyrics = []
+    with open(lyrics_dataset) as lyrics_dataset_file:
+        lyrics = json.load(lyrics_dataset_file)
+    print(lyrics)
     songs = []
     with open(song_dataset, 'r') as song_dataset_file:
         reader = csv.reader(song_dataset_file)
         next(reader, None)
         for row in reader:
-            songs.append(Song(row))
+            song_lyrics, song_translation = find_lyrics(lyrics, row[0], row[4])
+            songs.append(Song(row, song_lyrics, song_translation))
     for song in songs:
         print(song.__str__())
     with song_dump.open('wb') as f:
@@ -38,10 +51,10 @@ def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path,
         reader = csv.reader(vote_dataset_file, delimiter=';')
         next(reader, None)
         for row in reader:
-            print(row)
+            #print(row)
             votes.append(Voting(row))
-    for vote in votes:
-        print(vote.__str__())
+    #for vote in votes:
+        #print(vote.__str__())
     with vote_dump.open('wb') as f:
         pickle.dump(votes, f)
 
@@ -51,6 +64,7 @@ if __name__ == '__main__':
         country_dataset: Path
         song_dataset: Path
         vote_dataset: Path
+        lyrics_dataset: Path
         country_dump: Path
         song_dump: Path
         vote_dump: Path
@@ -71,6 +85,10 @@ if __name__ == '__main__':
         '--vote_dataset', type=Path,
         default=Path(__file__).resolve().parent / 'dataset_bodovi' / 'eurovision_song_contest_2009_2023.csv'
     )
+    parser.add_argument(
+        '--lyrics_dataset', type=Path,
+        default=Path(__file__).resolve().parent / 'dataset_stihovi' / 'eurovision-lyrics-2023.json'
+    )
 
     parser.add_argument(
         '--country_dump', type=Path,
@@ -86,5 +104,5 @@ if __name__ == '__main__':
     )
 
     args: Args = parser.parse_args()  # type: ignore
-    main(args.country_dataset, args.song_dataset, args.vote_dataset,
+    main(args.country_dataset, args.song_dataset, args.vote_dataset, args.lyrics_dataset,
          args.country_dump, args.song_dump, args.vote_dump)
