@@ -92,14 +92,14 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2021,1,14,21,Azerbaijan,Efendi,Mata Hari,English,Pop,0,Female,1,unknown,unknown,E Minor,100,68,71,46,6 dB,1,0,26,4,unknown,unknown,4,0,0,0,1,33,32,12,9,20,65,8,91,47,138,0,unknown,0
 2021,1,15,19,Ukraine,Go_A,Shum,Ukrainian,Traditional,0,Female,1,unknown,unknown,E Major,118,74,53,50,5 dB,5,0,11,6,unknown,unknown,2,0,3,0,1,267,97,38,19,5,364,2,164,103,267,0,unknown,0
 2021,1,16,6,Malta,Destiny,Je me casse,English,Pop,0,Female,1,unknown,unknown,Ab Minor,112,87,76,78,4 dB,15,0,28,11,unknown,unknown,4,0,0,0,1,47,208,15,35,7,255,1,151,174,325,1,unknown,0
-2021,2,1,-,San Marino,Senhit,Adrenalina,English,Dance,-,Mix,2,unknown,unknown,Bb Minor,104,89,67,53,6 dB,0,0,39,8,unknown,unknown,4,0,0,0,1,13,37,3,7,,,9,42,76,118,0,unknown,0
+2021,2,1,26,San Marino,Senhit,Adrenalina,English,Dance,-,Mix,2,unknown,unknown,Bb Minor,104,89,67,53,6 dB,0,0,39,8,unknown,unknown,4,0,0,0,1,13,37,3,7,,,9,42,76,118,0,unknown,0
 2021,2,2,-,Estonia,Uku Suviste,The Lucky One,English,Ballad,-,Male,1,unknown,unknown,Ab Minor,176,64,40,41,9 dB,4,0,9,7,unknown,unknown,0,0,0,0,0,,,,,,,13,29,29,58,0,unknown,0
 2021,2,3,-,Czechia,Benny Cristo,Omaga,English,Ballad,-,Male,1,unknown,unknown,Fs Major,122,87,72,89,6 dB,11,0,34,3,unknown,unknown,4,0,0,0,0,,,,,,,15,0,23,23,0,unknown,0
 2021,2,4,10,Greece,Stefania,Last Dance,English,Pop,0,Female,1,unknown,unknown,D Minor,147,91,53,39,5 dB,2,0,7,4,unknown,unknown,4,0,0,0,1,79,91,11,15,10,170,6,80,104,184,0,unknown,0
 2021,2,5,-,Austria,Vincent Bueno,Amen,English,Ballad,-,Male,1,unknown,unknown,Cs Major,80,38,44,8,10 dB,1,0,8,4,unknown,unknown,0,0,0,0,0,,,,,,,12,13,53,66,0,unknown,0
 2021,2,6,-,Poland,Rafal,The Ride,English,Pop,-,Male,1,unknown,unknown,B Minor,132,77,69,93,7 dB,40,0,25,3,unknown,unknown,4,0,0,0,0,,,,,,,14,17,18,35,0,unknown,0
 2021,2,7,14,Moldova,Natalia Gordienko,Sugar,English,Pop,0,Female,1,unknown,unknown,B Minor,120,76,69,51,7 dB,0,1,13,5,unknown,unknown,4,0,0,0,1,62,53,11,6,13,115,7,123,56,179,0,unknown,0
-2021,2,8,-,Iceland,Dadi og Gagnamagnio,10 Years,English,Pop,-,Male,1,unknown,unknown,D Minor,123,62,80,44,7 dB,1,0,9,4,unknown,unknown,0,2,3,0,1,180,198,29,28,,,2,148,140,288,0,unknown,0
+2021,2,8,12,Iceland,Dadi og Gagnamagnio,10 Years,English,Pop,-,Male,1,unknown,unknown,D Minor,123,62,80,44,7 dB,1,0,9,4,unknown,unknown,0,2,3,0,1,180,198,29,28,,,2,148,140,288,0,unknown,0
 2021,2,9,8,Serbia,Hurricane,Loco Loco,Serbian,Pop,0,Female,3,unknown,unknown,C Major,105,92,65,60,4 dB,17,0,16,12,unknown,unknown,0,0,0,0,1,82,20,12,3,15,102,8,68,56,124,0,unknown,0
 2021,2,10,-,Georgia,Tornike Kipiani,You,English,Ballad,-,Male,1,unknown,unknown,C Major,134,37,50,12,8 dB,24,4,19,2,unknown,unknown,0,0,0,0,0,,,,,,,16,15,1,16,0,unknown,0
 2021,2,11,2,Albania,Anxhela Peristeri,Karma,Albanian,Ballad,0,Female,1,unknown,unknown,G Minor,150,63,52,19,10 dB,0,0,13,4,unknown,unknown,0,0,0,0,1,35,22,5,4,21,57,10,38,74,112,0,unknown,0
@@ -564,3 +564,4 @@ year,semi_final,semi_draw_position,final_draw_position,country,artist_name,song_
 2009,-,-,17,Germany,Alex Swings Oscar Sings!,Miss Kiss Kiss Bang,English,Pop,1,Male,1,unknown,unknown,Bb Minor,136,89,62,56,4 dB,11,0,20,21,unknown,unknown,3,1,1,0,-,18,73,,,20,91,,,,,0,unknown,0
 2009,-,-,23,United Kingdom,Jade Ewen,It's My Time,English,Ballad,1,Female,1,unknown,unknown,E Major,105,31,30,12,14 dB,1,79,29,3,unknown,unknown,0,0,5,0,-,105,223,,,5,328,,,,,0,unknown,0
 2009,-,-,25,Spain,Soraya Arnelas,La noche es para mi,"Spanish, English",Dance,1,Female,1,unknown,unknown,F Minor,126,70,69,87,7 dB,1,73,14,3,unknown,unknown,2,3,0,0,-,38,9,,,24,47,,,,,0,unknown,0
+2015,-,-,12,Australia,Guy Sebastian,Tonight Again,English,Dance,1,Male,1,unknown,unknown,-,-,-,-,-,,-,-,-,-,unknown,unknown,4,4,0,0,-,,196,,33,5,196,,,,,0,unknown,0

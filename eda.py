@@ -7,6 +7,8 @@ from nltk.corpus import stopwords
 
 import pandas
 
+from transformer import load_data, adjust_song_dataframe, to_dataframe
+
 nltk.download('stopwords')
 
 
@@ -129,7 +131,7 @@ def check_vote_validity(songs_dataframe, votes_dataframe):
 def eda(countries_dataframe, songs_dataframe, votes_dataframe):
     check_song_data(songs_dataframe)
     check_vote_data(votes_dataframe)
-    #check_vote_validity(songs_dataframe, votes_dataframe)
+    check_vote_validity(songs_dataframe, votes_dataframe)
 
 
 def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path):
@@ -140,66 +142,11 @@ def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path):
     countries_dataframe = to_dataframe(countries)
 
     songs_dataframe = to_dataframe(songs)
-    adjust_song_dataframe(songs_dataframe)
+    songs_dataframe = adjust_song_dataframe(songs_dataframe)
 
     votes_dataframe = to_dataframe(votes)
 
-    #eda(countries_dataframe, songs_dataframe, votes_dataframe)
-
-
-def adjust_song_dataframe(songs_dataframe):
-    #songs_dataframe['language'] = songs_dataframe['language'].str.split(',').apply \
-    #    (lambda languages: [language.strip() for language in languages])
-    #songs_dataframe = songs_dataframe.drop('language', axis='columns').join(
-    #    songs_dataframe.language.str.join('|').str.get_dummies())
-
-    language_columns = songs_dataframe['language'].apply(lambda language: pandas.Series(language))
-    language_columns.columns = ["Language: " + str(col) for col in language_columns.iloc[0]]
-    songs_dataframe = pandas.concat([songs_dataframe, language_columns], axis=1)
-    songs_dataframe = songs_dataframe.drop(columns=['language'])
-
-    stop_words = list(stopwords.words('english'))
-    vectorizer = TfidfVectorizer(stop_words=stop_words)
-    tfidf_matrix = vectorizer.fit_transform(songs_dataframe['lyrics'])
-    feature_names = vectorizer.get_feature_names_out()
-    print("Feature names " + str(len(feature_names)) + ": " + feature_names)
-
-    important_words = []
-    for i in range(tfidf_matrix.shape[0]):
-        row = tfidf_matrix[i].toarray().flatten()
-        top_indices = row.argsort()[-20:][::-1]
-        top_features = [(feature_names[index], row[index]) for index in top_indices]
-        important_words.append(top_features)
-    print("Important words " + str(len(important_words)) + ": " + important_words.__str__())
-    words = [important_word[0] for words_in_song in important_words for important_word in words_in_song]
-    print("Amount of words: " + str(len(words)))
-    print("Amount of unique words: " + str(len(set(words))))
-    repeating_words = [item for item, count in Counter(words).items() if count > 10]
-    print("Amount of repeating words: " + str(len(repeating_words)))
-    print("Only words: " + words.__str__())
-
-    words_dataframe = pandas.DataFrame()
-    for word in repeating_words:
-        words_dataframe["Word: " + word] = songs_dataframe['lyrics'].str.lower().apply(lambda lyrics: word in lyrics)
-
-    songs_dataframe = pandas.concat([songs_dataframe, words_dataframe], axis=1)
-
-    print(songs_dataframe.columns)
-
-
-def to_dataframe(data_list):
-    dataframe = pandas.DataFrame([data.to_dict() for data in data_list])
-    print(len(dataframe))
-    print(f'{dataframe.head(10)}')
-    print(f'{dataframe.info()}')
-    return dataframe
-
-
-def load_data(dataset):
-    with dataset.open('rb') as f:
-        data_list = pickle.load(f)
-    print(len(data_list))
-    return data_list
+    eda(countries_dataframe, songs_dataframe, votes_dataframe)
 
 
 if __name__ == '__main__':
