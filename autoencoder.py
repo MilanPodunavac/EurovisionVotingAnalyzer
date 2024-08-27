@@ -54,7 +54,7 @@ def main(country_dataset: Path, song_dataset: Path, vote_dataset: Path):
     autoencoder.fit(
         train_data,
         train_data,
-        epochs=50,
+        epochs=10,
         batch_size=256,
         shuffle=True,
         validation_data=(test_data, test_data)
@@ -82,8 +82,8 @@ def draw_plot(result_df):
     tele_result_df = result_df[result_df['voting_method'] == 'T']
     plt.scatter(tele_result_df['EncodedX'], tele_result_df['EncodedY'], color=tele_result_df['color'], marker='o')
 
-    #for i in range(len(result_df)):
-    #    plt.text(result_df['EncodedX'][i] + 0.1, result_df['EncodedY'][i] + 0.1, result_df['vote_code'][i], fontsize=9)
+    for i in range(len(result_df)):
+        plt.text(result_df['EncodedX'][i] + 0.1, result_df['EncodedY'][i] + 0.1, result_df['vote_code'][i], fontsize=9)
 
     plt.xlabel('X-axis')
     plt.ylabel('Y-axis')
@@ -91,6 +91,33 @@ def draw_plot(result_df):
 
     # Show plot
     plt.show()
+
+    non_country_results = result_df[result_df['color'] == 'black']
+    countries_results = result_df[result_df['color'] != 'black']
+
+    for country in sorted(set(countries_results['voting_country'].unique())):
+        print(country)
+        country_results = countries_results[countries_results['voting_country'] == country]
+        plt.figure(figsize=(16, 9))
+        jury_result_df = country_results[country_results['voting_method'] == 'J']
+        plt.scatter(jury_result_df['EncodedX'], jury_result_df['EncodedY'], color=jury_result_df['color'], marker='s')
+        #for i in range(len(jury_result_df)):
+        #    plt.text(jury_result_df['EncodedX'][i] + 0.1, jury_result_df['EncodedY'][i] + 0.1, jury_result_df['vote_code'][i], fontsize=9)
+        tele_result_df = country_results[country_results['voting_method'] == 'T']
+        plt.scatter(tele_result_df['EncodedX'], tele_result_df['EncodedY'], color=tele_result_df['color'], marker='o')
+        #for i in range(len(tele_result_df)):
+        #    plt.text(tele_result_df['EncodedX'][i] + 0.1, tele_result_df['EncodedY'][i] + 0.1, tele_result_df['vote_code'][i], fontsize=9)
+
+        plt.scatter(non_country_results['EncodedX'], non_country_results['EncodedY'], color=non_country_results['color'], marker='.')
+        #for i in range(len(non_country_results)):
+        #    plt.text(non_country_results['EncodedX'][i] + 0.1, non_country_results['EncodedY'][i] + 0.1, non_country_results['vote_code'][i], fontsize=7)
+
+        plt.xlabel('X-axis')
+        plt.ylabel('Y-axis')
+        plt.title(country + ' - Eurovision Voting Analysis Scatter Plot')
+
+        # Show plot
+        plt.show()
 
 
 if __name__ == '__main__':

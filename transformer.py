@@ -152,7 +152,142 @@ def modify_key(key, index):
 
 
 def get_country_color(voting_country):
-    color_dict = {
+    color = color_dict.get(voting_country)
+    if color:
+        return color
+    #print(voting_country + ': color black')
+    return 'black'
+
+
+def to_input_row(voting_country, stage, method, year, songs_country, only_points):
+    # print(voting_country)
+    row = {'voting_country': voting_country,
+           'voting_stage': stage,
+           'voting_method': method,
+           'year': year,
+           'vote_code':
+               get_country_code(voting_country) + '_' + get_stage(stage) + '_' + method + '_' + f"{(year - 2000):02}",
+           'color': get_country_color(voting_country),
+           'marker': "s" if method == 'J' else "o",
+           }
+    songs_country_dict = create_song_dictionary(songs_country)
+    if len(songs_country_dict) < 10:
+        print(
+            f"Not enough votes ({len(songs_country_dict)}) from {voting_country}_{stage}_{method}_{year}: {[song['country'] for song in songs_country_dict]}")
+    for index, song in enumerate(songs_country_dict):
+        song_mod = {modify_key(key, index): val for key, val in song.items()}
+        row = {**row, **song_mod}
+    return row
+
+
+def get_stage(stage):
+    if stage == 'f':
+        return 'FNL'
+    return stage.upper()
+
+
+def get_country_code(voting_country):
+    if voting_country == 'Turkey':
+        return pycountry.countries.search_fuzzy('Türkiye')[0].alpha_2
+    if voting_country == 'Rest of the World':
+        return 'RW'
+    if voting_country == 'Iberia Lover':
+        return 'IBL'
+    if voting_country == 'Caucus Lover':
+        return 'CCL'
+    if voting_country == 'Scandinavia Lover':
+        return 'SCL'
+    if voting_country == 'Yugoslavia Lover':
+        return 'YUL'
+    if voting_country == 'Russia Lover':
+        return 'RUL'
+    if voting_country == 'Italy Lover':
+        return 'ITL'
+    if voting_country == 'Greece Lover':
+        return 'GRL'
+    if voting_country == 'English Language Lover':
+        return 'ELL'
+    if voting_country == 'French Language Lover':
+        return 'FLL'
+    if voting_country == 'Lithuanian Language Lover':
+        return 'LtLL'
+    if voting_country == 'High BPM Lover':
+        return 'HBL'
+    if voting_country == 'Low BPM Lover':
+        return 'LBL'
+    if voting_country == 'High energy Lover':
+        return 'HEL'
+    if voting_country == 'Low energy Lover':
+        return 'LEL'
+    if voting_country == 'High danceability Lover':
+        return 'HDL'
+    if voting_country == 'Low danceability Lover':
+        return 'LDL'
+    if voting_country == 'High happiness Lover':
+        return 'HHL'
+    if voting_country == 'Low happiness Lover':
+        return 'LHL'
+    if voting_country == 'High loudness Lover':
+        return 'HLL'
+    if voting_country == 'Low loudness Lover':
+        return 'LLL'
+    if voting_country == 'Love Theme Lover':
+        return 'LTL'
+    if voting_country == 'Favorites Lover':
+        return 'FVL'
+    return pycountry.countries.search_fuzzy(voting_country)[0].alpha_2
+
+
+def preprocess_songs(songs):
+    numerical_columns = ['bpm', 'energy', 'danceability', 'happiness', 'acousticness', 'instrumentalness', 'liveness',
+                         'speechiness', 'final_televote_points', 'final_jury_points', 'final_televote_votes',
+                         'final_jury_votes', 'final_total_points', 'semi_televote_points', 'semi_jury_points',
+                         'semi_total_points']
+    songs[numerical_columns] = StandardScaler().fit_transform(songs[numerical_columns])
+
+    string_columns = ['country', 'style', 'gender', 'key']
+    new_string_columns = []
+    for string in string_columns:
+        songs[f"{string}_copy"] = songs[f"{string}"]
+        new_string_columns.append(f"{string}_copy")
+    songs = pandas.get_dummies(songs, columns=new_string_columns)
+
+    songs = songs.replace({True: 0.3, False: 0}).infer_objects(copy=False)
+
+    return songs
+
+
+def create_song_dictionary(songs_country):
+    filtered_songs_country = songs_country.drop(['year_x',
+                                                 'semi_final',
+                                                 'semi_draw_position',
+                                                 'final_draw_position',
+                                                 'artist_name',
+                                                 'song_name',
+                                                 # 'language',
+                                                 'direct_qualifier',
+                                                 'age',
+                                                 'selection',
+                                                 'release_date',
+                                                 'qualified',
+                                                 'favourite',
+                                                 'race',
+                                                 'lyrics',
+                                                 'year_y',
+                                                 'stage',
+                                                 'method',
+                                                 'country_from',
+                                                 'country_to',
+                                                 'duplicate',
+                                                 'loudness',
+                                                 'key_change',
+                                                 'country', 'style', 'gender', 'key'], axis=1)
+    # filtered_songs_country = preprocess_songs(filtered_songs_country)
+    songs_country_dict = filtered_songs_country.to_dict('records')
+    return songs_country_dict
+
+
+color_dict = {
         'Iceland': 'blue',
         'Norway': 'blue',
         'Sweden': 'blue',
@@ -207,92 +342,3 @@ def get_country_color(voting_country):
         'Azerbaijan': 'orange',
         'Turkey': 'orange',
     }
-    color = color_dict.get(voting_country)
-    if color:
-        return color
-    print(voting_country + ': color black')
-    return 'black'
-
-
-def to_input_row(voting_country, stage, method, year, songs_country, only_points):
-    # print(voting_country)
-    row = {'voting_country': voting_country,
-           'voting_stage': stage,
-           'voting_method': method,
-           'year': year,
-           'vote_code':
-               get_country_code(voting_country) + '_' + get_stage(stage) + '_' + method + '_' + f"{(year - 2000):02}",
-           'color': get_country_color(voting_country),
-           'marker': "s" if method == 'J' else "o",
-           }
-    songs_country_dict = create_song_dictionary(songs_country)
-    if len(songs_country_dict) < 10:
-        print(
-            f"Not enough votes ({len(songs_country_dict)}) from {voting_country}_{stage}_{method}_{year}: {[song['country'] for song in songs_country_dict]}")
-    for index, song in enumerate(songs_country_dict):
-        song_mod = {modify_key(key, index): val for key, val in song.items()}
-        row = {**row, **song_mod}
-    return row
-
-
-def get_stage(stage):
-    if stage == 'f':
-        return 'FNL'
-    return stage.upper()
-
-
-def get_country_code(voting_country):
-    if voting_country == 'Turkey':
-        return pycountry.countries.search_fuzzy('Türkiye')[0].alpha_2
-    if voting_country == 'Rest of the World':
-        return 'RW'
-    return pycountry.countries.search_fuzzy(voting_country)[0].alpha_2
-
-
-def preprocess_songs(songs):
-    numerical_columns = ['bpm', 'energy', 'danceability', 'happiness', 'acousticness', 'instrumentalness', 'liveness',
-                         'speechiness', 'final_televote_points', 'final_jury_points', 'final_televote_votes',
-                         'final_jury_votes', 'final_total_points', 'semi_televote_points', 'semi_jury_points',
-                         'semi_total_points']
-    songs[numerical_columns] = StandardScaler().fit_transform(songs[numerical_columns])
-
-    string_columns = ['country', 'style', 'gender', 'key']
-    new_string_columns = []
-    for string in string_columns:
-        songs[f"{string}_copy"] = songs[f"{string}"]
-        new_string_columns.append(f"{string}_copy")
-    songs = pandas.get_dummies(songs, columns=new_string_columns)
-
-    songs = songs.replace({True: 0.1, False: 0}).infer_objects(copy=False)
-
-    return songs
-
-
-def create_song_dictionary(songs_country):
-    filtered_songs_country = songs_country.drop(['year_x',
-                                                 'semi_final',
-                                                 'semi_draw_position',
-                                                 'final_draw_position',
-                                                 'artist_name',
-                                                 'song_name',
-                                                 # 'language',
-                                                 'direct_qualifier',
-                                                 'age',
-                                                 'selection',
-                                                 'release_date',
-                                                 'qualified',
-                                                 'favourite',
-                                                 'race',
-                                                 'lyrics',
-                                                 'year_y',
-                                                 'stage',
-                                                 'method',
-                                                 'country_from',
-                                                 'country_to',
-                                                 'duplicate',
-                                                 'loudness',
-                                                 'key_change',
-                                                 'country', 'style', 'gender', 'key'], axis=1)
-    # filtered_songs_country = preprocess_songs(filtered_songs_country)
-    songs_country_dict = filtered_songs_country.to_dict('records')
-    return songs_country_dict
